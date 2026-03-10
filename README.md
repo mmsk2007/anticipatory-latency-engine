@@ -75,7 +75,6 @@ This is a core building block for agentic systems that feel instant.
 ## Architecture docs
 
 - `docs/ARCHITECTURE.md`
-- `docs/WORLD_CLASS_PLAN.md`
 
 ## v0.2 additions
 
