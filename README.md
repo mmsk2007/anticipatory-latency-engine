@@ -56,6 +56,12 @@ python3 examples/demo.py
 python3 examples/benchmark.py
 ```
 
+## Run v0.2 evaluation (hit-rate + latency + cost)
+
+```bash
+python3 examples/eval_v02.py
+```
+
 ## Research directions
 
 - online learning from accepted/rejected predictions
@@ -69,3 +75,10 @@ This is a core building block for agentic systems that feel instant.
 ## Architecture docs
 
 - `docs/ARCHITECTURE.md`
+- `docs/WORLD_CLASS_PLAN.md`
+
+## v0.2 additions
+
+- confidence + budget gating (`src/policy.py`)
+- measurable metrics (`src/metrics.py`)
+- evaluation runner (`examples/eval_v02.py`)
