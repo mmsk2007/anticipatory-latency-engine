@@ -1,6 +1,6 @@
 # Anticipatory Latency Engine (ALE)
 
-A framework for **predicting likely next user intents before the user sends the next message**, so voice and messaging agents can pre-build context/tools and respond faster.
+A general framework for **predicting likely next-turn user intents before the message arrives**, so voice and messaging agents can pre-build context/tools and respond faster.
 
 ## Why this exists
 
@@ -16,7 +16,12 @@ This enables:
 
 ## Core idea
 
-Given conversation history, generate top-K probable next intents with confidence scores, then run safe precomputation for the top candidates.
+Given conversation history, generate top-K probable next intents with confidence scores, then run safe speculative precomputation for top candidates.
+
+Think of it as **turn-level speculative execution**:
+- token-level models predict next words
+- ALE predicts likely next user moves
+- system prepares context ahead of time
 
 ## MVP scope
 
@@ -45,6 +50,12 @@ Given conversation history, generate top-K probable next intents with confidence
 python3 examples/demo.py
 ```
 
+## Run synthetic latency benchmark
+
+```bash
+python3 examples/benchmark.py
+```
+
 ## Research directions
 
 - online learning from accepted/rejected predictions
@@ -54,3 +65,7 @@ python3 examples/demo.py
 ## Positioning
 
 This is a core building block for agentic systems that feel instant.
+
+## Architecture docs
+
+- `docs/ARCHITECTURE.md`
